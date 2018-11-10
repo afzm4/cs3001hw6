@@ -7,6 +7,7 @@ Created on Sat Nov 10 16:08:37 2018
 import seaborn as sns
 import pandas as pd
 import numpy as np
+from sklearn.ensemble.partial_dependence import plot_partial_dependence
 from sklearn.datasets import fetch_california_housing
 
 houses = fetch_california_housing()
@@ -32,3 +33,5 @@ test2 = max(data[:,5])
 housingDF = pd.DataFrame(data=data, columns=names)
 #All 8 DistPlots together
 fig1 = housingDF.hist(bins=40, figsize=(9, 6))
+
+#fig, axs = plot_partial_dependence()
